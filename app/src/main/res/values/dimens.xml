@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="PaddingLarge">24dp</dimen>
+    <dimen name="textNormal">18sp</dimen>
+    <dimen name="textGaint">38sp</dimen>
+    <dimen name="taxtbutton">18sp</dimen>
+    <dimen name="marginnormal">16dp</dimen>
+    <dimen name="radiuscornal">32dp</dimen>
+</resources>

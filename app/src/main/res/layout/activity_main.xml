@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="@dimen/PaddingLarge">
+
+    <TextView
+        android:id="@+id/textView_opretion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:gravity="right"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/textNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_resule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="right"
+        android:text=""
+        android:textColor="@color/brand"
+        android:textSize="@dimen/textGaint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_opretion" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_plus"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button"
+        android:text="+"
+        android:textColor="@color/white"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toStartOf="@+id/Button_minus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_resule" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_minus"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:background="@drawable/circle_button"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toStartOf="@+id/Button_multi"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Button_plus"
+        app:layout_constraintTop_toTopOf="@+id/Button_plus" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_multi"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:background="@drawable/circle_button"
+        android:text="*"
+        android:textColor="@color/white"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toStartOf="@+id/Button_div"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Button_minus"
+        app:layout_constraintTop_toTopOf="@+id/Button_plus" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_div"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:background="@drawable/circle_button"
+        android:text="/"
+        android:textColor="@color/white"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Button_multi"
+        app:layout_constraintTop_toTopOf="@+id/Button_plus" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_digit_7"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button_white"
+        android:text="7"
+        android:onClick="onclicknumber"
+        android:textColor="@color/black"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Button_plus"
+        app:layout_constraintStart_toStartOf="@+id/Button_plus"
+        app:layout_constraintTop_toBottomOf="@+id/Button_plus" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_digit_8"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button_white"
+        android:text="8"
+        android:onClick="onclicknumber"
+        android:textColor="@color/black"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Button_minus"
+        app:layout_constraintStart_toStartOf="@+id/Button_minus"
+        app:layout_constraintTop_toBottomOf="@+id/Button_minus" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_digit_9"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button_white"
+        android:text="9"
+        android:onClick="onclicknumber"
+        android:textColor="@color/black"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Button_multi"
+        app:layout_constraintStart_toStartOf="@+id/Button_multi"
+        app:layout_constraintTop_toBottomOf="@+id/Button_multi" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_C"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button"
+        android:text="C"
+        android:textColor="@color/white"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Button_div"
+        app:layout_constraintStart_toStartOf="@+id/Button_div"
+        app:layout_constraintTop_toBottomOf="@+id/Button_div" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_digit_4"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button_white"
+        android:text="4"
+        android:onClick="onclicknumber"
+        android:textColor="@color/black"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Button_digit_7"
+        app:layout_constraintStart_toStartOf="@+id/Button_digit_7"
+        app:layout_constraintTop_toBottomOf="@+id/Button_digit_7" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_digit_5"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button_white"
+        android:text="5"
+        android:onClick="onclicknumber"
+        android:textColor="@color/black"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Button_digit_8"
+        app:layout_constraintStart_toStartOf="@+id/Button_digit_8"
+        app:layout_constraintTop_toBottomOf="@+id/Button_digit_8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_digit_6"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button_white"
+        android:text="6"
+        android:textColor="@color/black"
+        android:onClick="onclicknumber"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Button_digit_9"
+        app:layout_constraintStart_toStartOf="@+id/Button_digit_9"
+        app:layout_constraintTop_toBottomOf="@+id/Button_digit_9" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_plus_and_munis"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button"
+        android:text="+-"
+        android:textColor="@color/white"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Button_C"
+        app:layout_constraintStart_toStartOf="@+id/Button_C"
+        app:layout_constraintTop_toBottomOf="@+id/Button_C" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_digit_1"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button_white"
+        android:text="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/taxtbutton"
+        android:onClick="onclicknumber"
+        app:layout_constraintEnd_toEndOf="@+id/Button_digit_4"
+        app:layout_constraintStart_toStartOf="@+id/Button_digit_4"
+        app:layout_constraintTop_toBottomOf="@+id/Button_digit_4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_digit_2"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button_white"
+        android:text="2"
+        android:textColor="@color/black"
+        android:onClick="onclicknumber"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Button_digit_5"
+        app:layout_constraintStart_toStartOf="@+id/Button_digit_5"
+        app:layout_constraintTop_toBottomOf="@+id/Button_digit_5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_digit_3"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button_white"
+        android:text="3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/taxtbutton"
+        android:onClick="onclicknumber"
+        app:layout_constraintEnd_toEndOf="@+id/Button_digit_6"
+        app:layout_constraintStart_toStartOf="@+id/Button_digit_6"
+        app:layout_constraintTop_toBottomOf="@+id/Button_digit_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_mod"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button"
+        android:text="%"
+        android:textColor="@color/white"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Button_plus_and_munis"
+        app:layout_constraintStart_toStartOf="@+id/Button_plus_and_munis"
+        app:layout_constraintTop_toBottomOf="@+id/Button_plus_and_munis" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_digit_0"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button_white"
+        android:text="0"
+        android:textColor="@color/black"
+        android:textSize="@dimen/taxtbutton"
+        android:onClick="onclicknumber"
+        app:layout_constraintEnd_toEndOf="@+id/Button_digit_1"
+        app:layout_constraintStart_toStartOf="@+id/Button_digit_1"
+        app:layout_constraintTop_toBottomOf="@+id/Button_digit_1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_digit_."
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/circle_button_white"
+        android:text="."
+        android:onClick="onclicknumber"
+        android:textColor="@color/black"
+        android:textSize="@dimen/taxtbutton"
+        app:layout_constraintEnd_toEndOf="@+id/Button_digit_2"
+        app:layout_constraintStart_toStartOf="@+id/Button_digit_2"
+        app:layout_constraintTop_toBottomOf="@+id/Button_digit_2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Button_equal"
+        android:layout_width="150dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/raundat"
+        android:text="="
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/Button_mod"
+        app:layout_constraintStart_toStartOf="@+id/Button_digit_3"
+        app:layout_constraintTop_toBottomOf="@+id/Button_digit_3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
